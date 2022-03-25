@@ -17,7 +17,7 @@ def new_movie(request):
         form.save()
         return redirect(all_movies)
 
-    return render(request, 'film_form.html', {'form': form})
+    return render(request, 'film_form.html', {'form': form, 'nowy': True})
 
 
 @login_required()
@@ -30,7 +30,7 @@ def edit_movie(request, id):
         form.save()
         return redirect(all_movies)
 
-    return render(request, 'film_form.html', {'form': form})
+    return render(request, 'film_form.html', {'form': form, 'nowy': False})
 
 
 @login_required()

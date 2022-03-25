@@ -1,3 +1,16 @@
-h2 {
-    color: green;
+body {
+    padding: 2rem;
+}
+.film-poster {
+    width: 150px;
+    float: left;
+}
+.film-icon {
+   font-size: 1.6rem;
+}
+.description {
+    margin-left: 15px;
+}
+.card {
+    width: 36rem;
 }

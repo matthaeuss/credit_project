@@ -1,18 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Are you sure to delete "{{ film.title }}" movie?</h1>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Delete film</button>
-    </form>
+{% extends 'main.html' %}
+
+{% block title %} Confirm {% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 32rem;">
+      <div class="card-body">
+          <h5 class="card-title">Are you sure to delete "{{ film.title }}" movie?</h5>
+          <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" >Delete film</button>
+        </form>
+      </div>
+    </div>
     <a href="{% url 'all_movies' %}">Back</a>
-</body>
-</html>
+{% endblock %}
