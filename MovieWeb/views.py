@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Film, AdditionalInfo
-from .forms import FilmForm, AdditionalInfoForm
+from .models import Film, AdditionalInfo, Rating
+from .forms import FilmForm, AdditionalInfoForm, RatingForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -27,6 +27,7 @@ def new_movie(request):
 @login_required()
 def edit_movie(request, id):
     film = get_object_or_404(Film, pk=id)
+    oceny = Rating.objects.filter(film=film)
 
     try:
         additional = AdditionalInfo.objects.get(film=film.id)
@@ -36,7 +37,14 @@ def edit_movie(request, id):
     form_film = FilmForm(request.POST or None, request.FILES or None,
                     instance=film)
     form_additional = AdditionalInfoForm(request.POST or None,
-                    instance=additional)
+                                         instance=additional)
+    form_rating = RatingForm(request.POST or None)
+
+    if request.method == 'POST':
+        if 'stars' in request.POST:
+            ocena = form_rating.save(commit=False)
+            ocena.film = film
+            ocena.save()
 
     if all((form_film.is_valid(), form_additional.is_valid())):
         film = form_film.save(commit=False)
@@ -46,7 +54,7 @@ def edit_movie(request, id):
         return redirect(all_movies)
 
     return render(request, 'film_form.html', {'form': form_film,
-    'form_additional': form_additional, 'nowy': False})
+    'form_additional': form_additional, 'oceny': oceny, 'form_rating': form_rating, 'nowy': False})
 
 
 @login_required()

@@ -14,7 +14,7 @@ class AdditionalInfoForm(ModelForm):
         fields = ['duration', 'genre']
 
 
-# class RatingForm(ModelForm):
-#     class Meta:
-#         model = Rating
-#         fields = ['stars', 'review']
+class RatingForm(ModelForm):
+    class Meta:
+        model = Rating
+        fields = ['stars', 'review']

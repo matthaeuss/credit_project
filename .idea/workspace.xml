@@ -33,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lms" />
   </component>
   <component name="RunManager">
     <configuration name="credit_project" type="Python.DjangoServer" factoryName="Django server">
@@ -70,7 +70,7 @@
       <updated>1648115032516</updated>
       <workItem from="1648115034884" duration="17258000" />
       <workItem from="1648203399807" duration="21247000" />
-      <workItem from="1648291150063" duration="1734000" />
+      <workItem from="1648291150063" duration="6605000" />
     </task>
     <servers />
   </component>

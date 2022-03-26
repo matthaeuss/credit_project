@@ -23,11 +23,23 @@
     </form>
       </div>
     </div>
-    {% for rating in ratings %}
-        <h4>Stars: {{ rating.stars }}</h4>
-        <p>{{ rating.review }}</p>
-    {% endfor %}
 
+    <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
+      <div class="card-body">
+          <h5 class="card-title">Rate film</h5>
+
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form_rating|bootstrap }}
+                <button type="submit" class="btn btn-primary">Rate</button>
+    </form>
+      </div>
+    </div>
+
+    {% for ocena in oceny %}
+        <h4>Stars: {{ ocena.stars }}</h4>
+        <p>{{ ocena.review }}</p>
+    {% endfor %}
 
     <a href="{% url 'all_movies' %}">Back</a>
 {% endblock %}
