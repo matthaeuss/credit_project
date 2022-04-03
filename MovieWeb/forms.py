@@ -1,20 +1,13 @@
 from django.forms import ModelForm
-from .models import Film, AdditionalInfo, Rating
+from .models import Movie, Comment
 
 
 class FilmForm(ModelForm):
     class Meta:
-        model = Film
-        fields = ['title', 'description', 'premiere', 'year', 'imdb_rating', 'poster']
+        model = Movie
+        fields = ['title', 'description', 'year', 'country', 'imdb_rating', 'image', 'category']
 
-
-class AdditionalInfoForm(ModelForm):
+class CommentForm(ModelForm):
     class Meta:
-        model = AdditionalInfo
-        fields = ['duration', 'genre']
-
-
-class RatingForm(ModelForm):
-    class Meta:
-        model = Rating
-        fields = ['stars', 'review']
+        model = Comment
+        fields = ["movie", "content"]

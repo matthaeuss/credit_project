@@ -4,42 +4,15 @@
 
 {% block page %}
     <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
-      <div class="card-body">
-       {% if nowy %}
-                <h5 class="card-title">New film</h5>
-           {% else %}
-                <h5 class="card-title">Edit film</h5>
-           {% endif %}
-
-        <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|bootstrap }}
-        {{ form_additional|bootstrap }}
-           {% if nowy %}
-                <button type="submit" class="btn btn-primary">New film</button>
-           {% else %}
-                <button type="submit" class="btn btn-primary">Edit film</button>
-           {% endif %}
-    </form>
-      </div>
+        <div class="card-body">
+            <h5 class="card-title">New film</h5>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                    <button type="submit" class="btn btn-primary">New film</button>
+            </form>
+        </div>
     </div>
-
-    <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
-      <div class="card-body">
-          <h5 class="card-title">Rate film</h5>
-
-        <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form_rating|bootstrap }}
-                <button type="submit" class="btn btn-primary">Rate</button>
-    </form>
-      </div>
-    </div>
-
-    {% for ocena in oceny %}
-        <h4>Stars: {{ ocena.stars }}</h4>
-        <p>{{ ocena.review }}</p>
-    {% endfor %}
 
     <a href="{% url 'all_movies' %}">Back</a>
 {% endblock %}

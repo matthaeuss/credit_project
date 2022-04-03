@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{%  load bootstrap %}
+
+{% block title %} Comment movie{% endblock %}
+
+{% block page %}
+    <h2>Comment movie {{ title }}:</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <button type="submit" class="btn btn-primary">Comment movie</button>
+    </form>
+{% endblock %}
+

@@ -20,7 +20,7 @@
 {#        <h2>Number of movies in DB: {{ films|length }}</h2>#}
 
         {% for film in films %}
-            <div class="card" style="card">
+            <div class="card">
               <div class="card-body">
                   <img src="/media/{{ film.poster }}" class="film-poster">
                   <div class="row">
@@ -28,8 +28,9 @@
                         <h5 class="card-title">{{ film }}</h5>
                      </div>
                      <div class="col-3">
-                          <a href="{% url 'edit_movie' film.id %}"><i class="fa-solid fa-2x fa-pen-to-square film-icon"></i></a>
-                          <a href="{% url 'delete_movie' film.id %}"><i class="fa-solid fa-2x fa-trash-can film-icon"></i></a>
+                      <a href="{% url 'delete_movie' film.id %}"><i class="fa-solid fa-2x fa-trash-can film-icon"></i></a>
+                      <a href="{% url 'comment_movie' film.id %}">Dodaj komentarz</a>
+
                      </div>
                   </div>
                   <div class="row">
