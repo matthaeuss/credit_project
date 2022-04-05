@@ -5,11 +5,23 @@
 {% block page %}
     <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
         <div class="card-body">
-            <h5 class="card-title">New film</h5>
+            <h5 class="card-title">
+                {% if on_edition %}
+                    Edit film</button>
+                {% else %}
+                    New Film
+                {% endif %}
+            </h5>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|bootstrap }}
-                    <button type="submit" class="btn btn-primary">New film</button>
+
+                <button type="submit" class="btn btn-primary">
+                    {% if on_edition %}
+                        Edit film</button>
+                    {% else %}
+                        New Film
+                    {% endif %}
             </form>
         </div>
     </div>

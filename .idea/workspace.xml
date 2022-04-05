@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4972006c-67bb-4085-b813-f05ae43521a0" name="Changes" comment="" />
+    <list id="45976951-1f49-49f3-96fb-44d25ab62d6a" name="Changes by marcin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +30,21 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/MovieWeb/views.py">
+      <ranges>
+        <range start1="1" end1="3" start2="1" end2="3" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="8" end1="9" start2="8" end2="14" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="23" end1="23" start2="28" end2="47" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="47" end1="48" start2="71" end2="72" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="60" end1="61" start2="84" end2="84" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
+        <range start1="62" end1="77" start2="85" end2="103" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="78" end1="93" start2="104" end2="112" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+        <range start1="104" end1="104" start2="123" end2="124" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
+        <range start1="105" end1="105" start2="125" end2="166" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -45,7 +61,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lms" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="credit_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="credit_project" type="Python.DjangoServer" factoryName="Django server">
       <module name="credit_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,6 +107,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.credit_project" />
+      <item itemvalue="Python.manage" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,7 +130,10 @@
       <workItem from="1648291150063" duration="7439000" />
       <workItem from="1648369585414" duration="1475000" />
       <workItem from="1648399788455" duration="6000" />
-      <workItem from="1648994371572" duration="8182000" />
+      <workItem from="1648994371572" duration="8244000" />
+      <workItem from="1649173759902" duration="878000" />
+      <workItem from="1649175250333" duration="696000" />
+      <workItem from="1649176062789" duration="5033000" />
     </task>
     <servers />
   </component>
@@ -111,5 +161,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/credit_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1649175637758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% load bootstrap %}
+{% block title %}Edit Profile{% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
+        <div class="card-body">
+            <h5 class="card-title">New film</h5>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                    <button type="submit" class="btn btn-primary">Edit profile</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="{% url 'all_movies' %}">Back</a>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load bootstrap %}
+{% block title %}New Poster{% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
+        <div class="card-body">
+            <h5 class="card-title">My favorite movies!</h5>
+            {% for favorite in favorites %}
+                <p>
+                    Movie: {{ favorite.movie.title }}<br/>
+                    My rating: {{ favorite.rating }}<br/>
+                </p>
+                <a href="{% url 'delete_movie_from_favorites' favorite.id %}">Delete from favorites</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="{% url 'all_movies' %}">Back</a>
+{% endblock %}

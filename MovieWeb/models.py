@@ -61,9 +61,12 @@ class MovieFavorites(models.Model):
         (1, 1),
         (2, 2),
         (3, 3),
-        (4, 4)
+        (4, 4),
+        (5, 5),
     ]
 
     movie = models.ForeignKey(to=Movie, related_name="favorites", on_delete=models.CASCADE)
     user = models.ForeignKey(to=User, related_name="favorites", on_delete=models.CASCADE)
     rating = models.IntegerField(choices=RATINGS, max_length=1, default=3)
+
+    unique_together = ("user", "movie")

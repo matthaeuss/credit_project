@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %} Confirm deleting from favorites{% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 32rem;">
+      <div class="card-body">
+          <h5 class="card-title">Are you sure to delete "{{ favorite.movie.title }}" movie from favorites?</h5>
+          <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" >Delete film</button>
+        </form>
+      </div>
+    </div>
+    <a href="{% url 'all_movies' %}">Back</a>
+{% endblock %}
