@@ -178,6 +178,7 @@ def accept_movie_by_admin(request):
            }
     return render(request, 'accept_movie_by_admin.html', ctx)
 
+
 @login_required()
 def accept_movie_object(request, movie_id):
     movie = Movie.objects.get(id=movie_id)
