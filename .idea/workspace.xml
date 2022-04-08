@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4972006c-67bb-4085-b813-f05ae43521a0" name="Changes" comment="" />
-    <list id="6111cb34-4c2d-4bfd-ada8-5983cbb0269f" name="Changes by marcin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +118,7 @@
       <workItem from="1649173759902" duration="878000" />
       <workItem from="1649175250333" duration="696000" />
       <workItem from="1649176062789" duration="5605000" />
-      <workItem from="1649432875927" duration="3527000" />
+      <workItem from="1649432875927" duration="3629000" />
     </task>
     <servers />
   </component>

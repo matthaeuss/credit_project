@@ -17,3 +17,8 @@ class CreateMovieAsNotAcceptedTestCase(TestCase):
         movie = Movie.objects.create(title="Avatar")
         movie.save()
         self.assertEqual(movie.is_accepted, False)
+
+
+def test_create_user(django_user_model, user):
+    users = django_user_model.objects.all()
+    assert len(users) == 1
