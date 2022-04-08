@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def all_movies(request):
-    all_movies = Movie.objects.all()
+    all_movies = Movie.objects.filter(is_accepted=True)
     favorites_ids = MovieFavorites.objects.filter(user=request.user).values_list("movie__id", flat=True)
     ctx = {
         'films': all_movies,
@@ -164,3 +164,27 @@ def delete_movie_from_favorites(request, movie_favorite_id):
         return redirect(all_movies)
 
     return render(request, 'favorite_delete.html', {'favorite': favorite})
+
+
+@login_required()
+def accept_movie_by_admin(request):
+    not_accepted_movies = Movie.objects.filter(is_accepted=False)
+    if request.method == "POST":
+        if "accept_all" in request.POST:
+            not_accepted_movies.update(is_accepted=True)
+
+    ctx = {
+        'not_accepted_movies': not_accepted_movies
+           }
+    return render(request, 'accept_movie_by_admin.html', ctx)
+
+@login_required()
+def accept_movie_object(request, movie_id):
+    movie = Movie.objects.get(id=movie_id)
+
+    if request.method == "POST":
+        movie.is_accepted = True
+        movie.save()
+        return redirect(accept_movie_by_admin)
+
+    return render(request, 'accept_movie_object.html', {'movie': movie})

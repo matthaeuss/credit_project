@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load bootstrap %}
+
+{% block title %}Accept movie{% endblock %}
+
+{% block page %}
+
+    {% for movie in not_accepted_movies %}
+        <p>{{ movie.title }} ({{ movie.year }})
+            <a href="{% url 'accept_movie_object' movie.id %}">Zaakceptuj ten film</a>
+        <p>
+    {% endfor %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit"   class="btn btn-primary"name="accept_all">Accept all movies</button>
+    </form>
+    <a href="{% url 'all_movies' %}">Back</a>
+
+{% endblock %}
+

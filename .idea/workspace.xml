@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4972006c-67bb-4085-b813-f05ae43521a0" name="Changes" comment="" />
-    <list id="45976951-1f49-49f3-96fb-44d25ab62d6a" name="Changes by marcin" comment="" />
+    <list id="6111cb34-4c2d-4bfd-ada8-5983cbb0269f" name="Changes by marcin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,21 +29,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/MovieWeb/views.py">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="3" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="8" end1="9" start2="8" end2="14" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="23" end1="23" start2="28" end2="47" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="47" end1="48" start2="71" end2="72" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="60" end1="61" start2="84" end2="84" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
-        <range start1="62" end1="77" start2="85" end2="103" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="78" end1="93" start2="104" end2="112" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-        <range start1="104" end1="104" start2="123" end2="124" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
-        <range start1="105" end1="105" start2="125" end2="166" changelist="45976951-1f49-49f3-96fb-44d25ab62d6a" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -133,7 +118,8 @@
       <workItem from="1648994371572" duration="8244000" />
       <workItem from="1649173759902" duration="878000" />
       <workItem from="1649175250333" duration="696000" />
-      <workItem from="1649176062789" duration="5033000" />
+      <workItem from="1649176062789" duration="5605000" />
+      <workItem from="1649432875927" duration="2515000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %}Confirm acceptation {{ movie.title }}{% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 32rem;">
+      <div class="card-body">
+          <h5 class="card-title">Are you sure to accept "{{ movie.title }}" movie?</h5>
+          <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" >Accept movie</button>
+        </form>
+      </div>
+    </div>
+    <a href="{% url 'accept_movie_by_admin' %}">Back</a>
+{% endblock %}
