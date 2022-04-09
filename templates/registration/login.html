@@ -13,6 +13,7 @@
             {{ form|bootstrap }}
             <button type="submit" class="btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
         </form>
+          <a href="{% url 'registration' %}"><button type="submit" class="btn btn-primary">Register<i class="fas fa-sign-in-alt"></i></button></a>
       </div>
     </div>
 {% endblock %}

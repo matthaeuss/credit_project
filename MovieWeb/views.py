@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Movie, Poster, MovieFavorites
-from .forms import FilmForm, CommentForm, ProfileForm, PosterForm, MovieFavoritesForm
+from .forms import FilmForm, CommentForm, ProfileForm, PosterForm, MovieFavoritesForm, RegisterForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -189,3 +189,19 @@ def accept_movie_object(request, movie_id):
         return redirect(accept_movie_by_admin)
 
     return render(request, 'accept_movie_object.html', {'movie': movie})
+
+
+def register(request):
+    if request.method == "POST":
+        form_signup = RegisterForm(request.POST)
+        if form_signup.is_valid():
+            form_signup.save()
+            return redirect('all_movies')
+    else:
+        form_signup = RegisterForm()
+
+    context = {
+        'form_signup': form_signup,
+        }
+
+    return render(request, 'register.html', context)
