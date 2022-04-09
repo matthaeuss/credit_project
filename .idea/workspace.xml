@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4972006c-67bb-4085-b813-f05ae43521a0" name="Changes" comment="" />
+    <list id="af94b175-78dc-4235-8039-8fee90ca882c" name="Changes by marcin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +29,21 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/MovieWeb/urls.py">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="4" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
+        <range start1="7" end1="8" start2="8" end2="8" changelist="af94b175-78dc-4235-8039-8fee90ca882c" />
+        <range start1="16" end1="18" start2="16" end2="20" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/MovieWeb/tests.py">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="af94b175-78dc-4235-8039-8fee90ca882c" />
+        <range start1="2" end1="3" start2="3" end2="76" changelist="4972006c-67bb-4085-b813-f05ae43521a0" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -118,7 +134,7 @@
       <workItem from="1649173759902" duration="878000" />
       <workItem from="1649175250333" duration="696000" />
       <workItem from="1649176062789" duration="5605000" />
-      <workItem from="1649432875927" duration="3629000" />
+      <workItem from="1649432875927" duration="7177000" />
     </task>
     <servers />
   </component>
